@@ -21,12 +21,6 @@
             </a>
 
             <div style="display: flex; justify-content: center; align-items: center; position: absolute; top: 50px; left: 50%; transform: translateX(-50%);">
-    <div class="inputarea">
-        <form action="/searchBooks" method="get">
-            <input id="query" type="text" name="query" required>
-            <input type="submit" value="Search">
-        </form>
-    </div>
 </div>
 
             <button
@@ -44,27 +38,6 @@
                 class="collapse navbar-collapse"
                 id="navbarNav"
             >
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="<?php echo base_url('/');?>">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url('challenge');?>">Challenge</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url('admin');?>">Admin</a>
-                    </li>
-                   
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url('login');?>">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url('logout');?>">Logout</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url('register');?>">Register</a>
-                    </li>
-                </ul>
             </div>
         </div>
     </nav>

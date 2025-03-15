@@ -12,6 +12,7 @@ class User {
    public  $password;
    public  $email;
    public $conn;
+   public $user_type;
 
 
     public function __construct(){
@@ -60,6 +61,7 @@ public function login($email, $password) {
 
         $this->id = $dbUser->id;
         $this->username = $dbUser->username;
+        $this->user_type = $dbUser->user_type;
         return true;
 
     }

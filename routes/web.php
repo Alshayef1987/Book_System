@@ -8,8 +8,10 @@ $routes = [
     '/about'=>'HomeController@about',
     '/contact'=>'HomeController@contact',
     '/register'=>'UserController@showRegisterForm',
+    '/logout'=>'UserController@logout',
     '/login'=>'UserController@showlogin',
     '/admin'=>'AdminController@dashboard',
+    '/challenge'=>'ChallengeController@challenge',
     '/admin/users/profile'=>'UserController@showProfile',
    
 
