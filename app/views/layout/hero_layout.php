@@ -16,7 +16,7 @@
 <div class="container">
 <div class="hero">
     <div class="hero-content">
-        <h1>Welcome the MVC APP System</h1>
+        <h1>Welcome to Toki Online Library</h1>
         <p>Securely Register, Login and Manage </p>
         <div class="hero-buttons">
             <a class="btn" href="<?php echo base_url('login'); ?>">Login</a>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Book system</title>
+    <title>Toki Verkkokirjasto</title>
     <!-- Bootstrap CSS -->
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
@@ -16,7 +16,9 @@
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Books  System</a>
+            <a class="navbar-brand" href="#">
+            <img src="<?php echo base_url('Image/Logo.png'); ?>" alt="Logo" height="60" style="max-height: 80px; width: auto;"> 
+            </a>
             <button
                 class="navbar-toggler"
                 type="button"
@@ -33,24 +35,18 @@
                 id="navbarNav"
             >
                 <ul class="navbar-nav ms-auto">
-               
-
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="<?php echo base_url('/');?>">Home</a>
                     </li>
-                  
-
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo base_url('admin');?>">Admin</a>
                     </li>
-                   
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo base_url('login');?>">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url('register');?> ">Register</a>
+                        <a class="nav-link" href="<?php echo base_url('register');?>">Register</a>
                     </li>
-
                 </ul>
             </div>
         </div>
@@ -59,10 +55,10 @@
     <header class="bg-dark text-white py-5">
         <div class="container">
             <h1 class="display-4"><?php echo $title;?></h1>
-            <p class="lead"> <?php echo $message;?> 
-            </p>
+            <p class="lead"><?php echo $message;?></p>
         </div>
     </header>
+
 
     <!-- Main Content -->
 

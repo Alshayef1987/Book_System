@@ -6,7 +6,6 @@ class HomeController {
 
 $database = Database::getInstance();
 $conn = $database->getConnection();
-echo base_url('about');
         // echo BASE_URL;
         $data=[
             'title'=>'welcome to the home page',
