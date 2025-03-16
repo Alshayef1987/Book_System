@@ -39,8 +39,8 @@ class UserController {
 
         //echo "dsfgdsfgdsgfdsfgdsfgdsfgdsfgdsfgdsfgdfg";
         $data=[
-            'title'=>'Register here',
-            'message'=>'You can register here',
+            'title'=>'Welcome to Toki Online Library',
+            'message'=>'Unlock new worlds, expand your mind, and take on the challenge—one book at a time! 📚✨ Join the reading challenge and discover the magic hidden in every page. Are you ready to turn the next chapter?"',
         ];
         render('user/register',$data);
 
