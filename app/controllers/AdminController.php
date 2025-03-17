@@ -10,7 +10,7 @@ public function dashboard() {
         'title'=>'dashboard',
         'message'=>'Welcome to dashboard',
     ];
-    render('admin/dashboard',$data);
+   render('admin/admin_home',$data,'/layout/admin_layout');
 
 }
 

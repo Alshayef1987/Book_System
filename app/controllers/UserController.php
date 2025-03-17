@@ -26,14 +26,14 @@ class UserController {
 
     }
 
-    public function admin(){
-        $data=[
-            'title'=>'this is for admin',
-            'message'=>'Welcome to admin',
-        ];
-        render('home/admin',$data,'layouts/home_layout');
+    // public function admin(){
+    //     $data=[
+    //         'title'=>'this is for admin',
+    //         'message'=>'Welcome to admin',
+    //     ];
+    //     render('home/admin',$data,'layout/admin_layout');
 
-    }
+    // }
 
     public function showRegisterForm(){
 
@@ -45,7 +45,7 @@ class UserController {
         render('user/register',$data);
 
     }
-    
+
     public function register(){
 
         $user= new User();
