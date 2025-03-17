@@ -22,12 +22,19 @@ class Book {
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function getBookById($id) {
-        $query = "SELECT * FROM $this->table WHERE id = :id";
+    public function getAllBooks_name() {
+        $query = "SELECT `name` FROM $this->table";
         $stmt = $this->conn->prepare($query);
-        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+       $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function getBookBygenre($genre) {
+        $query = "SELECT * FROM $this->table WHERE genre = :genre";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':genre', $genry, PDO::PARAM_INT);
         $stmt->execute();
-        return $stmt->fetch(PDO::FETCH_OBJ);
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public function store() {

@@ -45,8 +45,7 @@ class UserController {
         render('user/register',$data);
 
     }
-
-
+    
     public function register(){
 
         $user= new User();
@@ -62,7 +61,6 @@ class UserController {
         }else{
             echo "There was an error";
         }
-
 
     }
 
@@ -101,12 +99,7 @@ class UserController {
     }
 
 
-
-
-
     public function logout (){
-    
-
         //Unset session variables= remove the session variables from the current session.
             unset($_SESSION['id'] );
              unset($_SESSION['email']);

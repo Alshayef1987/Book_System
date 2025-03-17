@@ -13,6 +13,11 @@ class User {
    public  $email;
    public $conn;
    public $user_type;
+   public $start_date;
+   public $end_date;
+   public $description;
+   public $books;
+
 
 
     public function __construct(){
@@ -32,6 +37,37 @@ public function store(){
     $stmt->bindParam(':username', $this->username);
     $stmt->bindParam(':email', $this->email);
     $stmt->bindParam(':password', $hashedPassword);
+
+
+    if($stmt->execute()){
+
+    return true;
+
+}
+
+return false;
+}
+
+
+public function add_challenge(){
+
+    $query = "INSERT INTO challenges (start_date, end_date, description,books,email) VALUES (:start_date, :end_date, :description,:books,:email)";
+    $stmt = $this->conn->prepare($query);
+
+    $this->start_date = htmlspecialchars(strip_tags($this->start_date));
+    $this->end_date= htmlspecialchars(strip_tags($this->end_date));
+    $this->description= htmlspecialchars(strip_tags($this->description));
+    $this->books= htmlspecialchars(strip_tags($this->books));
+    $this->email = $_SESSION['email'];
+  
+  
+
+
+    $stmt->bindParam(':start_date', $this->start_date);
+    $stmt->bindParam(':end_date', $this->end_date);
+    $stmt->bindParam(':description',$this->description);
+    $stmt->bindParam(':books',$this->books);
+    $stmt->bindParam(':email',$this->email);
 
 
     if($stmt->execute()){
@@ -68,7 +104,13 @@ public function login($email, $password) {
     return false;
 }
 
-
+public function get_challenges() {
+    $user_email=$_SESSION['email'];
+    $query = "SELECT * FROM challeges WHERE email=$user_email";
+    $stmt = $this->conn->prepare($query);
+   $stmt->execute();
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
 
 }
 

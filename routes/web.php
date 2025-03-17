@@ -11,8 +11,9 @@ $routes = [
     '/logout'=>'UserController@logout',
     '/login'=>'UserController@showlogin',
     '/admin'=>'AdminController@dashboard',
-    '/challenge'=>'ChallengeController@challenge',
+    '/challenge'=>'ChallengeController@showchallenge',
     '/admin/users/profile'=>'UserController@showProfile',
+    '/mychallenge'=>'ChallengeController@showmychallenge',
    
 
 
@@ -22,6 +23,9 @@ $routes = [
 
     '/register' => 'UserController@register', 
     '/loginUser' => 'UserController@loginUser',
+    '/challenge' => 'ChallengeController@challenge',
+    '/filter' => 'BookController@filter',
+
     ]
 
 ];

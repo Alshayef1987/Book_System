@@ -10,6 +10,7 @@
 
         
     >
+    <link rel="stylesheet" href="<?php echo base_url('css/bootstrap.css'); ?>">
   
 </head>
 <body>
@@ -56,13 +57,13 @@
                     </li>
                    
                     <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url('login');?>">Login</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="<?php echo base_url('logout');?>">Logout</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo base_url('register');?>">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo base_url('mychallenge');?>">My Challenge</a>
                     </li>
                 </ul>
             </div>

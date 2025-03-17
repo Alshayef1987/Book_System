@@ -2,14 +2,16 @@
 
 class ChallengeController {
 
+    public $conn;
 
-    private $userModel;
-
-    public function __construct(){
-        $this->userModel = new User();
+    private $challengeModel;
+    public function __construct() {
+        $this->challengeModel = new challenge();
     }
 
-    public function challenge(){
+    public function showchallenge(){
+       
+
         $data=[
             'title'=>'Welcome to Challenge Page',
             'message'=>'"Join the Book Reading Challenge and explore new worlds, one page at a time!"',
@@ -18,7 +20,100 @@ class ChallengeController {
 
     }
 
+
+    public function challenge(){
+
+        $user= new User();
+        $user-> start_date = $_POST['start_date'];
+        $user-> end_date = $_POST['end_date'];
+        $user-> description = $_POST['description'];
+        $user-> books = $_POST['books'];
+
+
+        if($user->add_challenge()){
+
+            redirect(path: '/');
+
+        }else{
+            echo "There was an error";
+        }
+
+
+    }
+
+    public function showmychallenge(){
+        echo 'hi';
+        
+        $data=[
+            'title'=>'Welcome to Challenge Page',
+            'message'=>'"Join the Book Reading Challenge and explore new worlds, one page at a time!"',
+        ];
+        render('user/mychallenge',$data);
+
+
+    }
+
+    public function get_my_challenge() {
+        $result_set = $this->challengeModel->get_my_challenge();
+
+        // Start of Bootstrap Container and Row
+        //echo '<div class="container">';
+       // echo '<div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">';
+
+        // Loop through books and display each one as a card
+        foreach ($result_set as $result) {
+            echo <<<DELIMITER
+            <tr>
+                <td>{$result['books']}</td>
+                <td>{$result['start_date']}</td>
+                <td>{$result['end_date']}</td>
+                <td ><button class="btn btn-warning">Renew</button></td>
+                <td ><button class="btn btn-success">Compeleted</button></td>
+            </tr>
+    
+DELIMITER;
+        }
+
+        // Close the Bootstrap Row and Container
+        //echo '</div>';
+        //echo '</div>';
+    }
+
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // ///////////////////////////////////
 // if (session_status() === PHP_SESSION_NONE) {
 //     session_start();
