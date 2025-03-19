@@ -29,13 +29,27 @@ class Book {
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    //////////////////////////////////////////////////////////
+
     public function getBookBygenre($genre) {
         $query = "SELECT * FROM $this->table WHERE genre = :genre";
         $stmt = $this->conn->prepare($query);
-        $stmt->bindParam(':genre', $genry, PDO::PARAM_INT);
+        $stmt->bindParam(':genre', $genre);
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    ////////////////////////////////////////////////
 
     public function store() {
         $query = "INSERT INTO $this->table (name, summary, author, genre, rating, image_url) VALUES (:name, :summary, :author, :genre, :rating, :image_url)";

@@ -1,9 +1,8 @@
 <?php
 
 class HomeController {
- 
     public function index(){
-echo  $_SESSION['id'];
+//echo  $_SESSION['id'];
 if(!isset( $_SESSION['id'])){
   redirect("login");
 }

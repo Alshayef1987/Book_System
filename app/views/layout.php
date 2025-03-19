@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+
     <meta charset="UTF-8">
     <title>Toki Verkkokirjasto</title>
     <!-- Bootstrap CSS -->
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
         rel="stylesheet"
-
         
     >
     <link rel="stylesheet" href="<?php echo base_url('css/bootstrap.css'); ?>">
-  
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -53,17 +53,13 @@
                         <a class="nav-link" href="<?php echo base_url('challenge');?>">Challenge</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url('admin');?>">Admin</a>
-                    </li>
-                   
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url('logout');?>">Logout</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="<?php echo base_url('register');?>">Register</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo base_url('mychallenge');?>">My Challenge</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo base_url('logout');?>">Logout</a>
                     </li>
                 </ul>
             </div>
@@ -97,7 +93,7 @@ echo $content;
     <footer class="bg-light py-4">
         <div class="container text-center">
             <p class="text-muted mb-0">
-                &copy; 2045 Books Trucking System. All rights reserved by Mohammed Alshayef            </p>
+                &copy; 2025 Online Books Library. All rights reserved by Mohammed Al-Shayef            </p>
         </div>
     </footer>
 

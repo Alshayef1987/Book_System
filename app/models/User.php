@@ -58,7 +58,7 @@ public function add_challenge(){
     $this->end_date= htmlspecialchars(strip_tags($this->end_date));
     $this->description= htmlspecialchars(strip_tags($this->description));
     $this->books= htmlspecialchars(strip_tags($this->books));
-    $this->email = $_SESSION['email'];
+    $this->email= htmlspecialchars(strip_tags($this->email));
   
   
 
@@ -111,6 +111,19 @@ public function get_challenges() {
    $stmt->execute();
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
+
+
+public function getAllusers() {
+    $query = "SELECT * FROM $this->table";
+    $stmt = $this->conn->prepare($query);
+   $stmt->execute();
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
+
+
+
+
+
 
 }
 

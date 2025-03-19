@@ -42,7 +42,7 @@ class ChallengeController {
     }
 
     public function showmychallenge(){
-        echo 'hi';
+        //echo 'hi';
         
         $data=[
             'title'=>'Welcome to Challenge Page',
@@ -81,11 +81,41 @@ DELIMITER;
 
 
 
+
+    public function All_challenge() {
+        $result_set = $this->challengeModel-> All_user_challenge();
+
+        // Start of Bootstrap Container and Row
+        //echo '<div class="container">';
+       // echo '<div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">';
+
+        // Loop through books and display each one as a card
+        foreach ($result_set as $result) {
+            echo <<<DELIMITER
+
+              <tr>
+                <td>{$result['email']}</td>
+                <td>{$result['start_date']}</td>
+                <td>{$result['end_date']}</td>
+                <td>{$result['description']}</td>
+                <td>{$result['books']}</td>
+                <td>{$result['created_at']}</td>
+            </tr>
+
+
+           
+    
+DELIMITER;
+        }
+
+
+
 }
 
 
 
 
+}
 
 
 

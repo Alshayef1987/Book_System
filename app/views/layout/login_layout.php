@@ -69,7 +69,7 @@ echo $content;
     <footer class="bg-light py-4">
         <div class="container text-center">
             <p class="text-muted mb-0">
-                &copy; 2045 Books Trucking System. All rights reserved by Mohammed Alshayef            </p>
+                &copy; 2025 Online Book Library. All rights reserved by Mohammed Alshayef            </p>
         </div>
     </footer>
 
