@@ -64,6 +64,9 @@ class UserController {
 
     }
 
+ 
+
+
     public function loginUser (){
 
      // Assuming $_POST contains 'email' and 'password'

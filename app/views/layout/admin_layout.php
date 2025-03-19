@@ -92,34 +92,29 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <div class="content">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-lg-10">
+          <div class="col-lg-12">
             <div class="card">
               <div class="card-body">
 
 <div class="card card-primary card-outline">
-<a href="#"><button class="btn btn-primary offset-10 m-3">Add User</button></a>
+<a href="<?php echo base_url('adduser');?>"><button class="btn btn-primary offset-10 m-3">Add User</button></a>
 <div class="card-body">
+<a href="<?php echo base_url('addbook');?>"><button class="btn btn-primary offset-10 m-3">Add book</button></a>
 
-<h3 class="card-title">Users</h3>
 
+
+<h3 class="card-title"><b>Users</b></h3>
 
 <table class="table">
 <thead>
 <tr>
-<td>username</td>
-<td>user_type</td>
-<td>email</td>
-<td>password</td>
+<td><b>username</b></td>
+<td><b>user_type</b></td>
+<td><b>email</b></td>
+<td><b>password</b></td>
 </tr>
 </thead>
-<tbody>
-  
 
-
-
-
-
-</tbody>
 <?php
 
 $admincontroller=new AdminController();
@@ -128,7 +123,7 @@ $admincontroller->alluser();
 
 
 </table>
-               
+
               </div>
             </div>
 
@@ -137,18 +132,18 @@ $admincontroller->alluser();
               <div class="card-body">
 
 
-<h5 class="card-title">Books</h5>
+<h5 class="card-title"><b>Books</b></h5>
 
 
 <table class="table">
 <thead>
 <tr>
-<td>name</td>
-<td>summary</td>
-<td>author</td>
-<td>genre</td>
-<td>rating</td>
-<td>image_url</td>
+<td>bname</td>
+<td><b>summary</b></td>
+<td><b>author</b></td>
+<td><b>genre</b></td>
+<td><b>rating</b></td>
+<td><b>image_url</b></td>
 </tr>
 </thead>
 <tbody>
@@ -177,17 +172,17 @@ $bookcontroller->get_all_books_adminpage();
 <div class="card card-primary card-outline">
 <div class="card-body">
 
-<h5 class="card-title">Challenges</h5>
+<h5 class="card-title"><b>Challenges</b></h5>
 
 <table class="table">
 <thead>
 <tr>
-<td>email</td>
-<td>start_date</td>
-<td>end_date</td>
-<td>description</td>
-<td>books</td>
-<td>created_at</td>
+<td><b>email</b></td>
+<td><b>start_date</b></td>
+<td><b>end_date</b></td>
+<td><b>description</b></td>
+<td><b>books</b></td>
+<td><b>created_at</b></td>
 </tr>
 </thead>
 <tbody>
@@ -204,16 +199,13 @@ $challengecontroller->All_challenge();
 
 </tbody>
 </table>
-
-<a href="#" class="card-link">Card link</a>
-<a href="#" class="card-link">Another link</a>
 </div>
 </div>
 
 <div class="card card-primary card-outline">
 <div class="card-body">
 
-                <h5 class="card-title">Empty</h5>
+                <h5 class="card-title"><b>Empty</b></h5>
                 <table class="table">
                 
                 <thead>
@@ -229,8 +221,7 @@ $challengecontroller->All_challenge();
     </thead>
     </table>
 
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
+              
               </div>
             </div><!-- /.card -->
           </div>

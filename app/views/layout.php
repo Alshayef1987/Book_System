@@ -53,9 +53,6 @@
                         <a class="nav-link" href="<?php echo base_url('challenge');?>">Challenge</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url('register');?>">Register</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="<?php echo base_url('mychallenge');?>">My Challenge</a>
                     </li>
                     <li class="nav-item">

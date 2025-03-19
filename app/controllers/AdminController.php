@@ -40,6 +40,64 @@ DELIMITER;
 }
 
 
+
+//////////////////////////////////user////////
+public function adduser(){
+
+    $user= new User();
+    $user-> username = $_POST['username'];
+    $user-> email = $_POST['email'];
+    $user-> password = $_POST['password'];
+
+
+    if($user->store()){
+
+        redirect(path: 'admin');
+
+    }else{
+        echo "There was an error";
+    }
+
+}
+
+public function showuser(){
+    $data=[
+        'title'=>'Add User',
+        'message'=>'',
+   ];
+    render('admin/add_user',$data,'layout/login_layout' );
+
+}
+
+
+public function addbook(){
+
+    $user= new User();
+    $user-> username = $_POST['username'];
+    $user-> email = $_POST['email'];
+    $user-> password = $_POST['password'];
+
+
+    if($user->store()){
+
+        redirect(path: 'admin');
+
+    }else{
+        echo "There was an error";
+    }
+
+}
+
+public function showbook(){
+    $data=[
+        'title'=>'Add User',
+        'message'=>'',
+   ];
+    render('admin/add_user',$data,'layout/login_layout' );
+
+}
+
+
 }
 
 

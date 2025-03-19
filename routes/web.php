@@ -14,6 +14,8 @@ $routes = [
     '/challenge'=>'ChallengeController@showchallenge',
     '/admin/users/profile'=>'UserController@showProfile',
     '/mychallenge'=>'ChallengeController@showmychallenge',
+    '/adduser' => 'AdminController@showuser', 
+    '/addbook' => 'AdminController@showbook', 
    
 
 
@@ -25,6 +27,9 @@ $routes = [
     '/loginUser' => 'UserController@loginUser',
     '/challenge' => 'ChallengeController@challenge',
     '/filter' => 'BookController@filter',
+    '/adduser' => 'AdminController@adduser', 
+    '/addbook' => 'AdminController@addbook', 
+
 
     ]
 
