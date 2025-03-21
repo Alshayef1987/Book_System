@@ -68,17 +68,20 @@ public function showuser(){
     render('admin/add_user',$data,'layout/login_layout' );
 
 }
-
+////////////////////////////////////////////////
 
 public function addbook(){
 
-    $user= new User();
-    $user-> username = $_POST['username'];
-    $user-> email = $_POST['email'];
-    $user-> password = $_POST['password'];
+    $books= new Book();
+    $books-> name = $_POST['name'];
+    $books-> summary = $_POST['summary'];
+    $books-> author = $_POST['author'];
+    $books-> genre = $_POST['genre'];
+    $books-> rating = $_POST['rating'];
+    $books-> image_url = $_POST['image_url'];
 
 
-    if($user->store()){
+    if($books->store()){
 
         redirect(path: 'admin');
 
@@ -90,10 +93,10 @@ public function addbook(){
 
 public function showbook(){
     $data=[
-        'title'=>'Add User',
+        'title'=>'Add Book',
         'message'=>'',
    ];
-    render('admin/add_user',$data,'layout/login_layout' );
+    render('admin/add_book',$data,'layout/login_layout' );
 
 }
 

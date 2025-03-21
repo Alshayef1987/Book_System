@@ -1,14 +1,16 @@
 
 <main class="container my-5">
-        <h2 class="text-center mb-4">Add User</h2>
+        <h2 class="text-center mb-4">Add Book</h2>
         <div class="row justify-content-center">
             <div class="col-md-6">
                 
                 <form action="<?php echo base_url('addbook');?>" method="post">
+
+
                     <div class="mb-3">
-                        <label for="name" class="form-label">Full Name *</label>
+                        <label for="name" class="form-label">Book Name *</label>
                         <input
-                            name = "username"
+                            name = "name"
                             type="text"
                             class="form-control"
                             id="name"
@@ -16,34 +18,67 @@
                         >
                     </div>
                     <div class="mb-3">
-                        <label for="email" class="form-label">Email address *</label>
+                        <label for="summary" class="form-label">Summary *</label>
                         <input
-                            name = "email"
-                            type="email"
+                            name = "summary"
+                            type="text"
                             class="form-control"
-                            id="email"
+                            id="summary"
                             required
                         >
-                    </div>
+                        </div>
+
+                        <div class="mb-3">
+                        <label for="author" class="form-label">author *</label>
+                        <input
+                            name = "author"
+                            type="text"
+                            class="form-control"
+                            id="author"
+                            required
+                        >
+
+                        </div>
+                  
+
                     <div class="mb-3">
-                        <label for="password" class="form-label">Password *</label>
+                        <label for="genre" class="form-label">Genre *</label>
                         <input
-                            name = "password"
-                            type="password"
+                            name = "genre"
+                            type="text"
                             class="form-control"
-                            id="password"
+                            id="genre"
                             required
                         >
+
+
                     </div>
-                    <div class="mb-3">
-                        <label for="confirm-password" class="form-label">Confirm Password *</label>
+
+                        <div class="mb-3">
+                        <label for="rating" class="form-label">Rating *</label>
                         <input
-                            name = "confirm_password"
-                            type="password"
+                            name = "rating"
+                            type="text"
                             class="form-control"
-                            id="confirm-password"
+                            id="rating"
                             required
                         >
+
+                        
+
+                    </div>
+
+                        <div class="mb-3">
+                        <label for="image_url" class="form-label">Image_utr  *</label>
+                        <input
+                            name = "image_url"
+                            type="text"
+                            class="form-control"
+                            id="image_url"
+                            required
+                        >
+
+
                     </div>
                     <button type="submit" class="btn btn-primary w-100">Add</button>
                 </form>

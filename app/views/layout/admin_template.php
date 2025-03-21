@@ -93,137 +93,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class="container-fluid">
         <div class="row">
           <div class="col-lg-12">
-            <div class="card">
-              <div class="card-body">
-
-<div class="card card-primary card-outline">
-<a href="<?php echo base_url('adduser');?>"><button class="btn btn-primary offset-10 m-3">Add User</button></a>
-<div class="card-body">
-
-
-
-
-<h3 class="card-title"><b>Users</b></h3>
-
-<table class="table">
-<thead>
-<tr>
-<td><b>username</b></td>
-<td><b>user_type</b></td>
-<td><b>email</b></td>
-<td><b>password</b></td>
-</tr>
-</thead>
-
-<?php
-
-$admincontroller=new AdminController();
-$admincontroller->alluser();
-?>
-
-
-</table>
-
-              </div>
-            </div>
-
-            <div class="card card-primary card-outline">
-            <a href="<?php echo base_url('addbook');?>"><button class="btn btn-primary m-3">Add Book</button></a>
-              <div class="card-body">
-
-
-<h5 class="card-title"><b>Books</b></h5>
-
-
-<table class="table">
-<thead>
-<tr>
-<td>bname</td>
-<td><b>summary</b></td>
-<td><b>author</b></td>
-<td><b>genre</b></td>
-<td><b>rating</b></td>
-<td><b>image_url</b></td>
-</tr>
-</thead>
-<tbody>
-<?php
-
-$bookcontroller=new BookController();
-$bookcontroller->get_all_books_adminpage();
-?>
-
-
-  <tr>
-    <td>bookname</td>
-    <td>description</td>
-    <td>author</td>
-    <td>genre</td>
-    <td>rating</td>
-    <td>image</td>
-  </tr>
-</tbody>
-</table>
-
-
-</div>
-</div>
-
-<div class="card card-primary card-outline">
-<div class="card-body">
-
-<h5 class="card-title"><b>Challenges</b></h5>
-
-<table class="table">
-<thead>
-<tr>
-<td><b>email</b></td>
-<td><b>start_date</b></td>
-<td><b>end_date</b></td>
-<td><b>description</b></td>
-<td><b>books</b></td>
-<td><b>created_at</b></td>
-</tr>
-</thead>
-<tbody>
-
-<?php
-
-$challengecontroller=new ChallengeController();
-$challengecontroller->All_challenge();
-?>
+           
 
 
 
 
 
-</tbody>
-</table>
-</div>
-</div>
-
-<div class="card card-primary card-outline">
-<div class="card-body">
-
-                <h5 class="card-title"><b>Empty</b></h5>
-                <table class="table">
-                
-                <thead>
-        <tr>
-            <td>none</td>
-            <td>none</td>
-            <td>none</td>
-            <td>none</td>
-            <td>none</td>
-            <td>none</td>
-
-        </tr>
-    </thead>
-    </table>
-
-              
-              </div>
-            </div><!-- /.card -->
+          </div>
+          </div>
+          </div>
           </div>
   
  
