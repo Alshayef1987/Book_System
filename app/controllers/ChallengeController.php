@@ -24,6 +24,7 @@ class ChallengeController {
     public function challenge(){
 
         $user= new User();
+        $user-> email = $_SESSION['email'];
         $user-> start_date = $_POST['start_date'];
         $user-> end_date = $_POST['end_date'];
         $user-> description = $_POST['description'];

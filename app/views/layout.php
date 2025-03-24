@@ -22,12 +22,7 @@
             </a>
 
             <div style="display: flex; justify-content: center; align-items: center; position: absolute; top: 50px; left: 50%; transform: translateX(-50%);">
-    <div class="inputarea">
-        <form action="/searchBooks" method="get">
-            <input id="query" type="text" name="query" required>
-            <input type="submit" value="Search">
-        </form>
-    </div>
+
 </div>
 
             <button

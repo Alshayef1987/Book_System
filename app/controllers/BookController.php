@@ -17,6 +17,7 @@ class BookController {
 
         // Loop through books and display each one as a card
         foreach ($result_set as $result) {
+            $path=base_url('challenge');
             echo <<<DELIMITER
                 <div class="col my-3">
                     <div class="card" style="width: 18rem;">
@@ -24,7 +25,7 @@ class BookController {
                         <div class="card-body">
                             <h5 class="card-title">{$result['name']}</h5>
                             <p class="card-text">{$result['summary']}</p>
-                            <a href="#" class="btn btn-primary">Read More</a>
+                              <a class="btn btn-primary" href="{$path}">Challenge</a>
                         </div>
                     </div>
                 </div>
@@ -56,37 +57,51 @@ class BookController {
 
 
 
-    public function filter(){
+    public function filter($genre= ''){
     
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {       
-        $genre=$_POST['genre'];
-        
-        $result_set = $this->bookModel->getBookBygenre($genre);
-        
+        if (isset($_GET['genre'])) {
 
-        foreach ($result_set as $result) {
-            echo <<<DELIMITER
-                <div class="col my-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src="/bimage/{$result['image_url']}" class="card-img-top" alt="Book Image">
-                        <div class="card-body">
-                            <h5 class="card-title">{$result['name']}</h5>
-                            <p class="card-text">{$result['summary']}</p>
-                            <a href="#" class="btn btn-primary">Read More</a>
+            if($genre===""){
+                $this->get_all_books();
+
+            }
+            else{
+                $genre=$_GET['genre'];
+                $result_set = $this->bookModel->getBookBygenre($genre);
+                foreach ($result_set as $result) {
+                    $path=base_url('challenge');
+                    echo <<<DELIMITER
+                        <div class="col my-3">
+                            <div class="card" style="width: 18rem;">
+                                <img src="/bimage/{$result['image_url']}" class="card-img-top" alt="Book Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">{$result['name']}</h5>
+                                    <p class="card-text">{$result['summary']}</p>
+                                   <a class="btn btn-primary" href="{$path}">Challenge</a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
+
+
 DELIMITER;
 
+
+
+            }
+         }      
+       
+        
+       
+        
+
+        
+
     }
-    render('home/index');
+    
     
 }
-else{
-    $this->get_all_books();
 
-}
-}
+
 
 
 
